@@ -398,3 +398,55 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# ====================
+# Copilot Studio & AI/ML Specific
+# ====================
+
+# Bot Framework & Copilot Studio
+*.bot
+bot-secrets.json
+agent-secrets.json
+copilot-studio-config.json
+
+# Training Data & Models
+training-data/
+models/
+*.pkl
+*.h5
+*.joblib
+*.model
+embeddings/
+vector-stores/
+
+# Teams App Development
+teams-app/*.zip
+temp-manifest/
+app-package/
+*.msapp
+
+# Environment & Secrets
+.env
+.env.local
+.env.production
+secrets.json
+config.local.json
+appsettings.Development.json
+
+# AI/ML Artifacts
+notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints
+experiments/
+logs/
+wandb/
+mlruns/
+
+# Azure & Cloud
+azure-credentials.json
+service-principal.json
+*.publishsettings
+
+# Copilot Studio Export/Import
+copilot-exports/
+temp-exports/
+*.zip.backup

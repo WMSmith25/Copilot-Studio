@@ -1,0 +1,99 @@
+{
+  "copilotStudio": {
+    "agentConfiguration": {
+      "name": "Teams Assistant",
+      "description": "AI-powered assistant for Microsoft Teams",
+      "language": "en-US",
+      "conversationFlow": {
+        "greeting": "Hello! I'm your Teams assistant. How can I help you today?",
+        "fallback": "I'm sorry, I didn't understand that. Could you please rephrase your question?",
+        "escalation": "Let me connect you with a human agent for further assistance."
+      }
+    },
+    "skills": [
+      {
+        "name": "meeting_management",
+        "description": "Help users schedule and manage meetings",
+        "enabled": true,
+        "permissions": ["calendar.read", "calendar.write"]
+      },
+      {
+        "name": "document_search",
+        "description": "Search and retrieve documents from SharePoint",
+        "enabled": true,
+        "permissions": ["files.read"]
+      },
+      {
+        "name": "team_collaboration",
+        "description": "Facilitate team communication and collaboration",
+        "enabled": true,
+        "permissions": ["group.read", "chat.read"]
+      }
+    ],
+    "knowledgeBase": {
+      "sources": [
+        {
+          "type": "sharepoint",
+          "url": "",
+          "enabled": false
+        },
+        {
+          "type": "website",
+          "url": "",
+          "enabled": false
+        },
+        {
+          "type": "faq",
+          "content": [],
+          "enabled": true
+        }
+      ]
+    },
+    "authentication": {
+      "required": true,
+      "provider": "azure_ad",
+      "scopes": [
+        "User.Read",
+        "Calendars.ReadWrite",
+        "Files.Read",
+        "Group.Read.All"
+      ]
+    },
+    "analytics": {
+      "enabled": true,
+      "trackConversations": true,
+      "trackUserSatisfaction": true,
+      "exportEnabled": false
+    }
+  },
+  "teams": {
+    "integration": {
+      "personalApp": true,
+      "teamApp": true,
+      "meetingApp": false,
+      "tabs": false,
+      "bots": true,
+      "messagingExtensions": false
+    },
+    "permissions": {
+      "identity": true,
+      "messageTeamMembers": true,
+      "webApplicationInfo": {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "resource": "https://graph.microsoft.com"
+      }
+    }
+  },
+  "deployment": {
+    "environment": "development",
+    "validation": {
+      "required": true,
+      "steps": [
+        "manifest_validation",
+        "bot_registration",
+        "permissions_check",
+        "security_scan"
+      ]
+    }
+  }
+}
