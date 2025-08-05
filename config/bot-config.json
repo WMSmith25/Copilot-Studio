@@ -1,0 +1,62 @@
+{
+  "name": "Copilot Studio Agent",
+  "description": "Microsoft Copilot Studio agent configuration for Teams deployment",
+  "version": "1.0.0",
+  "microsoftAppId": "00000000-0000-0000-0000-000000000000",
+  "microsoftAppPassword": "",
+  "microsoftAppTenantId": "00000000-0000-0000-0000-000000000000",
+  "botFrameworkSettings": {
+    "channels": [
+      {
+        "name": "msteams",
+        "enabled": true,
+        "configuration": {
+          "calling": {
+            "isCallingEnabled": false
+          },
+          "messaging": {
+            "isMessagingEnabled": true
+          }
+        }
+      }
+    ]
+  },
+  "copilotStudioSettings": {
+    "agentId": "",
+    "environment": "production",
+    "language": "en-US",
+    "timeZone": "UTC",
+    "features": {
+      "handoff": true,
+      "authentication": true,
+      "analytics": true
+    }
+  },
+  "deployment": {
+    "azureResourceGroup": "",
+    "azureSubscriptionId": "",
+    "appServicePlan": "",
+    "region": "eastus"
+  },
+  "security": {
+    "allowedOrigins": [
+      "https://teams.microsoft.com",
+      "https://teams.microsoft.us"
+    ],
+    "encryption": {
+      "enabled": true,
+      "keyVault": ""
+    }
+  },
+  "monitoring": {
+    "applicationInsights": {
+      "enabled": true,
+      "instrumentationKey": ""
+    },
+    "logging": {
+      "level": "info",
+      "enableConsoleLogging": true,
+      "enableFileLogging": false
+    }
+  }
+}

@@ -1,14 +1,61 @@
-# Project
+# Microsoft Copilot Studio Development Repository
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repository provides tools, documentation, and resources for developing Microsoft Copilot Studio agents and deploying them to Microsoft Teams.
 
-As the maintainer of this project, please make a few updates:
+## 🚀 Quick Start
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+### Prerequisites
+- Microsoft 365 tenant with Teams
+- Azure subscription with Bot Framework
+- Copilot Studio license
+- Git and development environment
+
+### Getting Started
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/WMSmith25/Copilot-Studio.git
+   cd Copilot-Studio
+   ```
+
+2. **Review the documentation**
+   - 📋 [File Inventory](COPILOT_STUDIO_FILE_INVENTORY.md) - Complete repository overview
+   - 🚀 [Teams Deployment Guide](TEAMS_DEPLOYMENT_GUIDE.md) - Teams integration instructions
+   - 🔒 [Security Guidelines](SECURITY.md) - Security best practices
+
+3. **Generate current file inventory**
+   ```bash
+   ./scripts/generate_file_inventory.sh
+   ```
+
+## 📁 Repository Structure
+
+The repository is organized to support Microsoft Copilot 365 and Teams deployment:
+
+- **Documentation**: Comprehensive guides for development and deployment
+- **Scripts**: Automation tools for inventory management and deployment
+- **Configuration**: Template files for various environments
+
+## 🔧 Available Tools
+
+### File Inventory Generator
+Run `./scripts/generate_file_inventory.sh` to get a comprehensive overview of all files and their relevance to Copilot Studio development.
+
+## 📊 Current Status
+
+This repository contains foundational documentation and tools. Based on the latest inventory:
+- ✅ Core documentation files (README, SECURITY, SUPPORT)
+- ✅ Legal compliance (LICENSE, CODE_OF_CONDUCT)
+- ✅ Development workflow (git configuration)
+- ❌ Teams app manifest (in development)
+- ❌ Bot Framework configuration (planned)
+- ❌ Python automation scripts (planned)
+
+## 🎯 Next Steps
+
+1. **Review Documentation**: Start with the [File Inventory](COPILOT_STUDIO_FILE_INVENTORY.md)
+2. **Plan Deployment**: Follow the [Teams Deployment Guide](TEAMS_DEPLOYMENT_GUIDE.md)
+3. **Configure Security**: Review [Security Guidelines](SECURITY.md)
+4. **Set Up Support**: Customize [Support Procedures](SUPPORT.md)
 
 ## Contributing
 
